@@ -130,13 +130,36 @@ route add -net 192.240.0.0 netmask 255.255.248.0 gw 192.240.24.150
 route add -net 192.240.24.152 netmask 255.255.255.248 gw 192.240.24.153 
 
 ### Pembagian IP Subneting dengan CIDR
+Rute yang akan kita gunakan adalah rute yang sama dengan Subnetting menggunakan VLSM
 Pertama, kita perlu menentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet. 
+# Subnet A
 ![Subnet A](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/c435459a-fda4-45f6-a2e4-231d1db54177)
+
+# Subnet B
 ![Subnet B](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/0755473b-e48e-4068-9e75-4d3507c91063)
+
+# Subnet C
 ![Subnet C](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/7f3a8a81-97f0-4248-9cc9-b8ef6a641d7c)
+
+# Subnet D
 ![Subnet D](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/70ba3f85-208e-4939-8f16-9d847a6e2fc2)
+
+# Subnet E
 ![Subnet E](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/55d7fdd3-ef1d-40aa-87a7-f6a7823b3bdc)
+
+# Subnet F
 ![Subnet F](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/7a154b97-cb69-457f-a553-2992212c66be)
+
+# Subnet G
 ![Subnet G](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/9d236ed9-63a2-47e3-95ae-f78206dada0c)
+
+# Subnet H
 ![Subnet H](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/87a82976-e0a2-43ff-b159-fb219be864bc)
+
+# Subnet I
 ![Subnet I](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/2f92b76d-0173-4c5f-a4bc-0c8770e4c077)
+
+Karena kita sudah mengelompokkan subnet-subnet tersebut pada tingkatnya masing-masing, maka kita dapat membuat pohon untuk menentukan IP dari masing-masing subnet, saya menggunakan Visual Subnet Calculator (https://www.davidc.net/sites/default/subnets/subnets.html)
+
+# Visual Subnet
+![image](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/8c8f1ba9-f580-4e06-ac6f-ab392051d91b)
