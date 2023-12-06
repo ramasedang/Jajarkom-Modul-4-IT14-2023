@@ -2,7 +2,7 @@
 * Moh. Sulthan Arief Rahmatullah
 * Fransiskus Benyamin
 
-### Pembagian IP Subneting dengan VLSM
+## Pembagian IP Subneting dengan VLSM
 Pertama kita lakukan pembagian subneting nya berikut gambar saya
 ![WhatsApp Image 2023-12-02 at 9 54 21 PM](https://github.com/ramasedang/Jarkom-Modul-3-IT14-2023/assets/76695790/cadc5cf5-cbdb-454b-854a-833384faec49)
 
@@ -129,34 +129,34 @@ route add -net 192.240.0.0 netmask 255.255.248.0 gw 192.240.24.150
 #Himmel
 route add -net 192.240.24.152 netmask 255.255.255.248 gw 192.240.24.153 
 
-### Pembagian IP Subneting dengan CIDR
+## Pembagian IP Subneting dengan CIDR
 Rute yang akan kita gunakan adalah rute yang sama dengan Subnetting menggunakan VLSM
 Pertama, kita perlu menentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet. 
-# Subnet A
+### Subnet A
 ![Subnet A](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/c435459a-fda4-45f6-a2e4-231d1db54177)
 
-# Subnet B
+### Subnet B
 ![Subnet B](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/0755473b-e48e-4068-9e75-4d3507c91063)
 
-# Subnet C
+### Subnet C
 ![Subnet C](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/7f3a8a81-97f0-4248-9cc9-b8ef6a641d7c)
 
-# Subnet D
+### Subnet D
 ![Subnet D](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/70ba3f85-208e-4939-8f16-9d847a6e2fc2)
 
-# Subnet E
+### Subnet E
 ![Subnet E](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/55d7fdd3-ef1d-40aa-87a7-f6a7823b3bdc)
 
-# Subnet F
+### Subnet F
 ![Subnet F](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/7a154b97-cb69-457f-a553-2992212c66be)
 
-# Subnet G
+### Subnet G
 ![Subnet G](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/9d236ed9-63a2-47e3-95ae-f78206dada0c)
 
-# Subnet H
+### Subnet H
 ![Subnet H](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/87a82976-e0a2-43ff-b159-fb219be864bc)
 
-# Subnet I
+### Subnet I
 ![Subnet I](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/2f92b76d-0173-4c5f-a4bc-0c8770e4c077)
 
 Penggabungan subnet-subnet tersebut dapat lebih jelas dilihat pada tabel-tabel dibawah ini.
@@ -164,7 +164,39 @@ Penggabungan subnet-subnet tersebut dapat lebih jelas dilihat pada tabel-tabel d
 ![image](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/b81e5bc3-afca-49c1-b585-3dcdf6c286d2)
 ![image](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/d7732e64-c384-4d2f-98d3-d516630af975)
 
+Dari proses penggabungan yang telah dilakukan, didapatkan sebuah subnet besar dengan netmask /14. Kita menggunakan menggunakan NID 192.240.0.0, netmask 255.252.0.0.
+
 Karena kita sudah mengelompokkan subnet-subnet tersebut pada tingkatnya masing-masing, maka kita dapat membuat pohon untuk menentukan IP dari masing-masing subnet, saya menggunakan Visual Subnet Calculator (https://www.davidc.net/sites/default/subnets/subnets.html)
 
-# Visual Subnet
+### Visual Subnet
 ![image](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/8c8f1ba9-f580-4e06-ac6f-ab392051d91b)
+
+Maka didapatkanlah IP Tree sebagai berikut
+![IT14_Modul-4_CIDR-Tree](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/6661057b-4d9f-4027-bf69-4d5648602623)
+
+dan berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berikut.
+
+| Subnet | Network ID    | Netmask         | Broadcast       |
+| ------ | ------------- | --------------- | --------------- |
+| A2     | 192.241.0.0   | 255.255.255.252 | 192.241.0.3     |
+| A3     | 192.243.0.0   | 255.255.255.252 | 192.243.0.3     |
+| A4     | 192.240.128.0 | 255.255.255.252 | 192.240.128.3   |
+| A5     | 192.242.128.0 | 255.255.255.224 | 192.242.128.31  |
+| A6     | 192.241.128.0 | 255.255.255.0   | 192.241.128.255 |
+| A7     | 192.240.96.0  | 255.255.255.252 | 192.240.96.3    |
+| A8     | 192.240.80.0  | 255.255.255.252 | 192.240.80.3    |
+| A9     | 192.240.32.0  | 255.255.255.252 | 192.240.32.3    |
+| A10    | 192.240.112.0 | 255.255.255.248 | 192.240.112.7   |
+| A11    | 192.240.72.0  | 255.255.252.0   | 192.240.75.255  |
+| A12    | 192.240.64.0  | 255.255.255.0   | 192.240.64.255  |
+| A13    | 192.240.16.0  | 255.255.254.0   | 192.240.17.255  |
+| A14    | 192.240.8.0   | 255.255.255.252 | 192.240.8.3     |
+| A15    | 192.240.4.0   | 255.255.255.224 | 192.240.4.31    |
+| A16    | 192.240.0.0   | 255.255.252.0   | 192.240.3.255   |
+| A17    | 192.242.64.0  | 255.255.255.252 | 192.242.64.3    |
+| A18    | 192.242.16.0  | 255.255.255.252 | 192.242.16.3    |
+| A19    | 192.242.32.0  | 255.255.252.0   | 192.242.35.255  |
+| A20    | 192.242.0.0   | 255.255.255.252 | 192.242.0.3     |
+| A21    | 192.242.8.0   | 255.255.255.248 | 192.242.8.7     |
+| A22    | 192.242.24.0  | 255.255.248.0   | 192.242.31.255  |
+
