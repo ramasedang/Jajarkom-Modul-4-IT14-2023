@@ -1,5 +1,5 @@
 # Modul 4 Jarkom IT14
-* Moh. Sulthan Arief Rahmatullah - 5027211035
+* Moh. Sulthan Arief Rahmatullah - 5027211045
 * Fransiskus Benyamin - 5027211021
 
 ## Pembagian IP Subneting dengan VLSM
