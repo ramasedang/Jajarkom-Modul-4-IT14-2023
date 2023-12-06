@@ -161,66 +161,67 @@ Pertama, kita perlu menentukan subnet yang ada dalam topologi dan lakukan labell
 
 Penggabungan subnet-subnet tersebut dapat lebih jelas dilihat pada tabel-tabel dibawah ini.
 
-## I. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| B1     | A2            | /30           |
-| B2     | A7            | /30           |
-| B3     | A11           | /22           |
-| B4     | A15           | /27           |
-| B5     | A18           | /30           |
-| B6     | A20           | /30           |
-
-## II. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| C1     | A8            | /30           |
-| C2     | A14           | /30           |
-| C3     | B5            | /20           |
-
-## III. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| D1     | B2            | /28           |
-| D2     | A13           | /23           |
-| D3     | A19           | /22           |
-
-## IV. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| E1     | A9            | /30           |
-| E2     | A17           | /30           |
-
-## V. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| F1     | D1            | /19           |
-| F2     | A5            | /27           |
-
-## VI. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| G1     | A4            | /30           |
-| G2     | A3            | /30           |
-
-## VII. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| H1     | B1            | /23           |
-
-## VIII. Penggabungan
-
-| Subnet | Gabungan dari | Netmask Akhir |
-|--------|---------------|---------------|
-| I1     | G2            | /15           |
-
+| Penggabungan |               |               |         |     |     |
+| ------------ | ------------- | ------------- | ------- | --- | --- |
+| I            |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| B1           | A2            | /30           | A6      | /24 | /23 |
+| B2           | A7            | /30           | A10     | /29 | /28 |
+| B3           | A11           | /22           | A12     | /24 | /21 |
+| B4           | A15           | /27           | A16     | /22 | /21 |
+| B5           | A18           | /30           | A22     | /21 | /20 |
+| B6           | A20           | /30           | A21     | /29 | /28 |
+|              |               |               |         |     |     |
+| II           |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| C1           | A8            | /30           | B3      | /21 | /20 |
+| C2           | A14           | /30           | B4      | /21 | /20 |
+| C3           | B5            | /20           | B6      | /28 | /19 |
+|              |               |               |         |     |     |
+| III          |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| D1           | B2            | /28           | C1      | /20 | /19 |
+| D2           | A13           | /23           | C2      | /20 | /19 |
+| D3           | A19           | /22           | C3      | /19 | /18 |
+|              |               |               |         |     |     |
+| IV           |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| E1           | A9            | /30           | D2      | /19 | /18 |
+| E2           | A17           | /30           | D3      | /18 | /17 |
+|              |               |               |         |     |     |
+| V            |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| F1           | D1            | /19           | E1      | /18 | /17 |
+| F2           | A5            | /27           | E2      | /17 | /16 |
+|              |               |               |         |     |     |
+| VI           |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| G1           | A4            | /30           | F1      | /17 | /16 |
+| G2           | A3            | /30           | F2      | /16 | /15 |
+|              |               |               |         |     |     |
+| VII          |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| H1           | B1            | /23           | G1      | /16 | /15 |
+|              |               |               |         |     |     |
+| VI           |               |               |         |     |     |
+| Subnet       | Gabungan dari | Netmask Akhir |
+| 1            | 2             |
+| Subnet       | Netmask       | Subnet        | Netmask |
+| I1           | G2            | /15           | H1      | /15 | /14 |
 
 Karena kita sudah mengelompokkan subnet-subnet tersebut pada tingkatnya masing-masing, maka kita dapat membuat pohon untuk menentukan IP dari masing-masing subnet, saya menggunakan Visual Subnet Calculator (https://www.davidc.net/sites/default/subnets/subnets.html)
 
