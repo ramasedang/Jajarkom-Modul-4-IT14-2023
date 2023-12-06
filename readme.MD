@@ -1,6 +1,6 @@
 # Modul 4 Jarkom IT14
-* Moh. Sulthan Arief Rahmatullah
-* Fransiskus Benyamin
+* Moh. Sulthan Arief Rahmatullah - 5027211035
+* Fransiskus Benyamin - 5027211021
 
 ## Pembagian IP Subneting dengan VLSM
 Pertama kita lakukan pembagian subneting nya berikut gambar saya
@@ -200,3 +200,8 @@ dan berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berikut.
 | A21    | 192.242.8.0   | 255.255.255.248 | 192.242.8.7     |
 | A22    | 192.242.24.0  | 255.255.248.0   | 192.242.31.255  |
 
+## Routing pada Cisco Packet Tracer (CIDR)
+Setelah mengikuti perintah dari modul, kita telah berhasil melakukan routing yang dapat dilihat pada screenshot ini
+![image](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/38aaee53-85e8-4f44-bec8-f781290b117a)
+
+Sekian dan terimakasih.
