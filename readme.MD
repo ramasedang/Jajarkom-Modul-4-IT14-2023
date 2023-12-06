@@ -159,6 +159,69 @@ Pertama, kita perlu menentukan subnet yang ada dalam topologi dan lakukan labell
 # Subnet I
 ![Subnet I](https://github.com/ramasedang/Jajarkom-Modul-4-IT14-2023/assets/73869671/2f92b76d-0173-4c5f-a4bc-0c8770e4c077)
 
+Penggabungan subnet-subnet tersebut dapat lebih jelas dilihat pada tabel-tabel dibawah ini.
+
+## I. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| B1     | A2            | /30           |
+| B2     | A7            | /30           |
+| B3     | A11           | /22           |
+| B4     | A15           | /27           |
+| B5     | A18           | /30           |
+| B6     | A20           | /30           |
+
+## II. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| C1     | A8            | /30           |
+| C2     | A14           | /30           |
+| C3     | B5            | /20           |
+
+## III. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| D1     | B2            | /28           |
+| D2     | A13           | /23           |
+| D3     | A19           | /22           |
+
+## IV. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| E1     | A9            | /30           |
+| E2     | A17           | /30           |
+
+## V. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| F1     | D1            | /19           |
+| F2     | A5            | /27           |
+
+## VI. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| G1     | A4            | /30           |
+| G2     | A3            | /30           |
+
+## VII. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| H1     | B1            | /23           |
+
+## VIII. Penggabungan
+
+| Subnet | Gabungan dari | Netmask Akhir |
+|--------|---------------|---------------|
+| I1     | G2            | /15           |
+
+
 Karena kita sudah mengelompokkan subnet-subnet tersebut pada tingkatnya masing-masing, maka kita dapat membuat pohon untuk menentukan IP dari masing-masing subnet, saya menggunakan Visual Subnet Calculator (https://www.davidc.net/sites/default/subnets/subnets.html)
 
 # Visual Subnet
